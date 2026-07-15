@@ -1,0 +1,17 @@
+# Render.com blueprint — deploy the tagging backend free.
+# 1. Push this repo to GitHub
+# 2. render.com → New → Blueprint → pick the repo
+# 3. Set GROQ_API_KEY and APP_SECRET when prompted
+services:
+  - type: web
+    name: wardrobe-ai-backend
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: APP_SECRET
+        sync: false

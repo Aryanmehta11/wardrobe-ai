@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "Wardrobe AI",
+    "slug": "wardrobe-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#faf3ef"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.aryan.wardrobeai"
+    },
+    "android": {
+      "package": "com.aryan.wardrobeai",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#faf3ef",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": ["android.permission.CAMERA"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-sqlite",
+      [
+        "expo-camera",
+        { "cameraPermission": "Allow Wardrobe AI to photograph your clothes." }
+      ],
+      [
+        "expo-image-picker",
+        { "photosPermission": "Allow Wardrobe AI to pick clothing photos from your gallery." }
+      ]
+    ]
+  }
+}
